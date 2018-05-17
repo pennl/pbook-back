@@ -2,7 +2,7 @@
 require 'vendor/autoload.php'; // include Composer's autoloader
 ini_set('mbstring.substitute_character', "none");
 
-$client = new MongoDB\Client("mongodb://localhost:27017");
+$client = new MongoDB\Client("mongodb://pbook-db:27017");
 $collection = $client->test->books;
 $t = mb_convert_encoding($_GET['name'], 'UTF-8', 'UTF-8');
 $c = $_GET['start'];
